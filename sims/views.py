@@ -3,8 +3,8 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 # 数据库信息（以MySQL为例）
-DB_username = 'root'
-DB_password = 'ghjk45628'
+DB_username = 'XXX'
+DB_password = 'XXX'
 
 # 数据库端口和名字
 DB_port = 3306
