@@ -7,6 +7,13 @@
 - Web框架：Django 3.0.6
 - 数据库：MySQL8.021
 - 操作系统：Windows 10
+
+- Python类库
+django
+pymysql
+sqlalchemy
+pandas
+xlrd
 # WebExcel
 
 ## 思路
@@ -28,4 +35,3 @@ DB_name = 'test'
 
 填入数据库的用户以及密码
 test的数据库也要先创建
-
