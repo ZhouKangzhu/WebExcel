@@ -18,11 +18,11 @@
 在sims/views.py中配置MySQL数据库的信息
 
 
-# 数据库信息（以MySQL为例）
+### 数据库信息（以MySQL为例）
 DB_username = 'XXXXX'
 DB_password = 'XXXXX'
 
-# 数据库端口和名字
+### 数据库端口和名字
 DB_port = 3306
 DB_name = 'test'
 
