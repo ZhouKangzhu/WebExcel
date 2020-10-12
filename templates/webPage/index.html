@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生列表</title>
+
+
+</head>
+
+<body style="margin-top: 30px;margin-left: 30px;">
+
+
+<form action="{% url "sims:upload" %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file"
+           title="Upload excel file"
+           name="excel_file"
+           style="border: 1px solid black; padding: 5px;"
+           required="required">
+    <p></p>
+    <input type="submit"
+           value="打开文件"
+           style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+</form>
+
+<p></p>
+
+<a href="../add"><input name="添加新行" type="button" id="btn2" value="添加新行"
+                        style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;"/></a>
+
+<a href="../write"><input name="保存文件" type="button" id="btn3" value="保存文件"
+                          style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;"/></a>
+
+<p></p>
+
+<table border="1px" width="100%" style="border-collapse: collapse;">
+    <tr>
+        {% for col_name in col_names %}
+            <th>
+                {{ col_name }}
+            </th>
+        {% endfor %}
+        <th>操作</th>
+    </tr>
+    {% for row in data %}
+        <tr>
+            {% for cell in row %}
+                <td align="center">{{ cell }} </td>
+            {% endfor %}
+            <td align="center">
+                <a href="../edit/?id={{ row.0 }}">
+                    编辑
+                </a>
+                <a href="../delete/?id={{ row.0 }}">
+                    删除
+                </a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>

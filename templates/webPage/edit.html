@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑</title>
+
+</head>
+<body style="margin-top: 30px;margin-left: 30px;">
+
+
+<form method="post" action="../edit/">
+    {% csrf_token %}
+    <input type="hidden" name="id" value="{{ id }}"/>
+    <table border="1px" width="100%" style="border-collapse: collapse;">
+        <tr>
+            {% for col_name in col_names %}
+                <th>
+                    {{ col_name }}
+                </th>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for value in values %}
+                <th>
+                    <input name="inputdata{{ forloop.counter }}" value=" {{ value }}"
+                           style="border: none;overflow: hidden;eight: 100%;width: 95%;text-align: center;"/>
+                </th>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input name="提交" type="submit" id="btn3" value="提交"
+                       style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;"/></a>
+            </td>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>
