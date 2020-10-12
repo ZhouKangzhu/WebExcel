@@ -1,5 +1,5 @@
 ## 前言
-本篇使用Python Web框架Django以及MySQL数据库，实现对Excel文件的在线
+本篇使用Python Web框架Django以及MySQL数据库，实现对Excel文件的在线读取和修改
 
 ## 开发环境
 - 开发工具：Pycharm 2020.3
